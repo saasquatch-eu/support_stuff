@@ -22,7 +22,3 @@ These are historical examples with varying levels of completeness. Organization-
 Start with [configuration and secrets](docs/configuration.md) and [.env.example](.env.example). Credentials are supplied through environment variables; Postman uses named private environment variables. A renderer creates private copies of the dashboard and collections beneath ignored `local/`.
 
 GitHub Actions secrets must be explicitly mapped to environment variables in the workflow step. No administrative workflow is enabled in this repository.
-
-## Project context
-
-For a portfolio case study, document the original problem, your contribution, implementation choices, and measured or observed result alongside the relevant example. This collection retains source examples and third-party notices; inclusion alone does not establish sole authorship or redistribution rights.
