@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadDescription</key>
+        <string>Configures all Nudge preferences</string>
+        <key>PayloadDisplayName</key>
+        <string>Nudge Preferences</string>
+        <key>PayloadIdentifier</key>
+        <string>com.github.macadmins.Nudge.preferences</string>
+        <key>PayloadOrganization</key>
+        <string></string>
+        <key>PayloadType</key>
+        <string>com.github.macadmins.Nudge</string>
+        <key>PayloadUUID</key>
+        <string>CA02957C-7472-446B-9F77-3E0414405556</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>optionalFeatures</key>
+        <dict>
+          <key>aggressiveUserExperience</key>
+          <true/>
+          <key>aggressiveUserFullScreenExperience</key>
+          <false/>
+          <key>asynchronousSoftwareUpdate</key>
+          <true/>
+          <key>attemptToBlockApplicationLaunches</key>
+          <false/>
+          <key>attemptToFetchMajorUpgrade</key>
+          <false/>
+          <key>enforceMinorUpdates</key>
+          <true/>
+        </dict>
+        <key>osVersionRequirements</key>
+        <array>
+          <dict>
+            <key>aboutUpdateURLs</key>
+            <array>
+              <dict>
+                <key>_language</key>
+                <string>en</string>
+                <key>aboutUpdateURL</key>
+                <string>https://netguru.atlassian.net/wiki/spaces/SUP/pages/3031728351/Apple+Mac+OS+system+updates</string>
+              </dict>
+            </array>
+            <key>majorUpgradeAppPath</key>
+            <string>/System/Library/PreferencePanes/SoftwareUpdate.prefPane</string>
+            <key>requiredInstallationDate</key>
+            <date>2022-11-30T23:00:00Z</date>
+            <key>requiredMinimumOSVersion</key>
+            <string>13.0.1</string>
+            <key>targetedOSVersionsRule</key>
+            <string>default</string>
+          </dict>
+        </array>
+        <key>userExperience</key>
+        <dict>
+          <key>allowGracePeriods</key>
+          <true/>
+          <key>allowUserQuitDeferrals</key>
+          <false/>
+          <key>allowedDeferrals</key>
+          <integer>1000000</integer>
+          <key>allowedDeferralsUntilForcedSecondaryQuitButton</key>
+          <integer>7</integer>
+          <key>approachingRefreshCycle</key>
+          <integer>6000</integer>
+          <key>approachingWindowTime</key>
+          <integer>72</integer>
+          <key>elapsedRefreshCycle</key>
+          <integer>300</integer>
+          <key>gracePeriodInstallDelay</key>
+          <integer>72</integer>
+          <key>gracePeriodLaunchDelay</key>
+          <integer>3</integer>
+          <key>gracePeriodPath</key>
+          <string>/private/var/db/.AppleSetupDone</string>
+          <key>imminentRefreshCycle</key>
+          <integer>600</integer>
+          <key>imminentWindowTime</key>
+          <integer>24</integer>
+          <key>initialRefreshCycle</key>
+          <integer>18000</integer>
+          <key>maxRandomDelayInSeconds</key>
+          <integer>1200</integer>
+          <key>noTimers</key>
+          <false/>
+          <key>nudgeRefreshCycle</key>
+          <integer>60</integer>
+          <key>randomDelay</key>
+          <false/>
+        </dict>
+        <key>userInterface</key>
+        <dict>
+          <key>fallbackLanguage</key>
+          <string>en</string>
+          <key>forceFallbackLanguage</key>
+          <false/>
+          <key>forceScreenShotIcon</key>
+          <false/>
+          <key>iconDarkPath</key>
+          <string>/Library/Application Support/Nudge/netguru_logo.jpg</string>
+          <key>iconLightPath</key>
+          <string>/Library/Application Support/Nudge/netguru_logo.jpg</string>
+          <key>screenShotDarkPath</key>
+          <string>/Library/Application Support/Nudge/itops.jpg</string>
+          <key>screenShotLightPath</key>
+          <string>/Library/Application Support/Nudge/itops.jpg</string>
+          <key>showDeferralCount</key>
+          <true/>
+          <key>simpleMode</key>
+          <false/>
+          <key>singleQuitButton</key>
+          <false/>
+          <key>updateElements</key>
+          <array>
+            <dict>
+              <key>_language</key>
+              <string>en</string>
+              <key>actionButtonText</key>
+              <string>Update Device</string>
+              <key>informationButtonText</key>
+              <string>More Info</string>
+              <key>mainContentHeader</key>
+              <string>Your device will restart during this update</string>
+              <key>mainContentNote</key>
+              <string>Important Notes</string>
+              <key>mainContentSubHeader</key>
+              <string>Updates can take around 45 minutes to complete</string>
+              <key>mainContentText</key>
+              <string>A fully up-to-date device is required to ensure that IT Operations Team can accurately protect your device.
+                
+If you do not update your device, you may lose access to some items necessary for your day-to-day tasks, such as Google Mail, Google Drive etc
+                
+To begin the update, simply click on the Update Device button and follow the provided steps</string>
+              <key>mainHeader</key>
+              <string>Your device requires a security update</string>
+              <key>primaryQuitButtonText</key>
+              <string>Remind me later</string>
+              <key>secondaryQuitButtonText</key>
+              <string>I understand and will update later</string>
+              <key>subHeader</key>
+              <string>A friendly reminder from your IT Ops Team at Netguru</string>
+            </dict>
+          </array>
+        </dict>
+      </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Configures Nudge application</string>
+    <key>PayloadDisplayName</key>
+    <string>Nudge</string>
+    <key>PayloadIdentifier</key>
+    <string>com.github.macadmins.Nudge.example</string>
+    <key>PayloadOrganization</key>
+    <string>Nudge</string>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>2F54F734-132D-4539-B583-F1DCF23DB5EB</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+  </dict>
+</plist>

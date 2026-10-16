@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "174357cd-0a4a-4327-b551-eabf548ac9b8",
+		"name": "InVision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://netguru.invisionapp.com/scim/v2/Users?filter=userName eq \"dawid.brygier@netguru.com\"",
+					"protocol": "https",
+					"host": [
+						"netguru",
+						"invisionapp",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"Users"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "userName eq \"dawid.brygier@netguru.com\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "password",
+							"value": "{{INVISION_PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "{{INVISION_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/scim+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"value\": {\"active\":false}\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://netguru.invisionapp.com/scim/v2/Users/<put_user_id_here>",
+					"protocol": "https",
+					"host": [
+						"netguru",
+						"invisionapp",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"Users",
+						"<put_user_id_here>"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{INVISION_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

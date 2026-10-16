@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "239a9903-ddde-4a6b-bb1c-4e3ceb665065",
+		"name": "op scim custom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "deactivate user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{OP_SCIM_CUSTOM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://scim.netguru.co/scim/Groups",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"netguru",
+						"co"
+					],
+					"path": [
+						"scim",
+						"Groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{OP_SCIM_CUSTOM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://scim.netguru.co/scim/Groups",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"netguru",
+						"co"
+					],
+					"path": [
+						"scim",
+						"Groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{OP_SCIM_CUSTOM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://scim.netguru.co/scim/Groups",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"netguru",
+						"co"
+					],
+					"path": [
+						"scim",
+						"Groups"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{OP_SCIM_CUSTOM_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

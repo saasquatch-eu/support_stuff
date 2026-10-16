@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "e3b4d88e-95f7-4cca-941b-cff20d9f44db",
+		"name": "bridge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{BRIDGE_AUTHORIZATION}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://netgurutalent.bridgeapp.com/api/author/users?includes[custom_fields]&only_deleted=true",
+					"protocol": "https",
+					"host": [
+						"netgurutalent",
+						"bridgeapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"author",
+						"users"
+					],
+					"query": [
+						{
+							"key": "includes[custom_fields]",
+							"value": null
+						},
+						{
+							"key": "only_deleted",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{BRIDGE_AUTHORIZATION}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"users\": \n    [\n        {\n            \"uid\": \"supporter@netguru.com\",\n            \"first_name\": \"Stefan\",\n            \"last_name\": \"Batory\",\n            \"email\": \"supporter@netguru.com\",\n            \"full_name\": \"Stefan Batory\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://netgurutalent.bridgeapp.com/api/admin/users",
+					"protocol": "https",
+					"host": [
+						"netgurutalent",
+						"bridgeapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get custom fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "bridge suite get token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Tenant-ID",
+						"value": "netgurutalent",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{BRIDGE_CLIENT_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{BRIDGE_CLIENT_SECRET}}",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "{{BRIDGE_USERNAME}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{BRIDGE_PASSWORD}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.bridgeapp.com/auth/authorize",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bridgeapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bridge suite get feedbacks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

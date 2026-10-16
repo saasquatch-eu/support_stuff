@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadIdentifier</key>
+        <string>d9c0cdca-55b5-45b7-8bd8-478d46268cc7</string>
+        <key>PayloadUUID</key>
+        <string>a216867b-6349-4421-80a2-ac07f5b2cb58</string>
+        <key>PayloadEnabled</key>
+        <true />
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadDisplayName</key>
+        <string>Login Items: Managed Items</string>
+        <key>PayloadType</key>
+        <string>com.apple.loginitems.managed</string>
+        <key>AutoLaunchedApplicationDictionary-managed</key>
+        <array>
+          <dict>
+            <key>Path</key>
+            <string>/Applications/Okta Verify.app/</string>
+            <key>Hide</key>
+            <true/>
+          </dict>
+        </array>
+      </dict>
+      <dict>
+        <key>PayloadIdentifier</key>
+        <string>d70f1e07-a26b-4ebb-a298-2175b954e056</string>
+        <key>PayloadUUID</key>
+        <string>b5bad2db-a46d-4d2b-b61f-41d4636a8f15</string>
+        <key>PayloadEnabled</key>
+        <true />
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadDisplayName</key>
+        <string>Login Items: User Restrictions</string>
+        <key>PayloadType</key>
+        <string>com.apple.loginwindow</string>
+        <key>DisableLoginItemsSuppression</key>
+        <false />
+      </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string></string>
+    <key>PayloadDisplayName</key>
+    <string>OKTA Verify Autostart</string>
+    <key>PayloadIdentifier</key>
+    <string>53bbe2e4-c4ea-4cc2-be25-2399c969899d</string>
+    <key>PayloadOrganization</key>
+    <string></string>
+    <key>PayloadRemovalDisallowed</key>
+    <false />
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>70039be4-a474-44f4-99de-9f0b52552256_1</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadScope</key>
+    <string>System</string>
+  </dict>
+</plist>

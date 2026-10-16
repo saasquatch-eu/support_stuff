@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "2ccb0058-d28d-4039-9b16-c50f79cc9d1d",
+		"name": "toggl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all users toggl",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_token",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{TOGGL_USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOGGL_AUTHORIZATION}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.track.toggl.com/api/v8/workspaces/373759/workspace_users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"track",
+						"toggl",
+						"com"
+					],
+					"path": [
+						"api",
+						"v8",
+						"workspaces",
+						"373759",
+						"workspace_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.track.toggl.com/api/v8/workspaces/373759/workspace_users",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "api_token",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{TOGGL_USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOGGL_AUTHORIZATION}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.track.toggl.com/api/v8/workspaces/373759/workspace_users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"track",
+						"toggl",
+						"com"
+					],
+					"path": [
+						"api",
+						"v8",
+						"workspaces",
+						"373759",
+						"workspace_users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

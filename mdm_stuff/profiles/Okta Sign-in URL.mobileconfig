@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>OKTA Sign-in URL</string>
+			<key>PayloadIdentifier</key>
+			<string>com.okta.mobile.55A272F9-A76D-4AE6-95C2-5001D985908F</string>
+			<key>PayloadType</key>
+			<string>com.okta.mobile</string>
+			<key>PayloadUUID</key>
+			<string>55A272F9-A76D-4AE6-95C2-5001D985908F</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+            <key>OktaVerify.OrgUrl</key>
+            <string>netguru.okta.com</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>OKTA Sign-in URL</string>
+	<key>PayloadIdentifier</key>
+	<string>Arkadiusz-Czub-Q2CFJK2M16.832FEB59-0302-46D5-B19B-E83D0E341EBC</string>
+	<key>PayloadOrganization</key>
+	<string>Netguru</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>832FEB59-0302-46D5-B19B-E83D0E341EBC</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

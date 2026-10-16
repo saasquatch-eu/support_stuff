@@ -1,0 +1,27 @@
+support_stuff/GAM/gam_offb_with_pass.sh
+
+
+ instalacja:
+ - pobrać gdzie bądź
+ - w lokalizacji pliku nalezy odpalić w terminalu "chmod +x gam_offb_with_pass.sh"
+   plik zostanie zmieniony na wykonywalny i bedzie można go uruchamiać w konsoli
+ - WAZNE - zastąpic wystapienia "dawid.brygier" swoim userem
+ - dodać ścieżkę do skryptu w konfigu basha:
+   w terminalu wpisać:
+
+              "nano ~/.bash_profile"
+          lub "nano /etc/zshrc"
+
+   dodać alias dlo skrytpu, np.:
+
+              alias offboarding='~/GAM/gam_offboarding.sh'
+
+   zapisać zmiany
+
+  działanie:
+ - wymaga zmiennych OFFBOARDING_PASSWORD i OFFBOARDING_WEBHOOK_URL (patrz docs/configuration.md)
+ - robi co trzeba w g-suite. Zmiana hasla odpina dysku, usuwa z grup. kopia plików do lidera, delegacja skrzynki, transfer eventów ze zwolnieniem resourców.
+ - inicjalizuje offboardingowe scenriusze na Integromacie (OFFBOARDING_WEBHOOK_URL)
+
+  użycie:
+  - bash GAM/gam_offb_with_pass.sh old.user leader.name

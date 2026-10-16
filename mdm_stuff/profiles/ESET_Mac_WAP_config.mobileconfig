@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1">
+<dict>
+<key>PayloadUUID</key>
+<string>292E66E6-E04D-4810-9695-78086CAB61D3</string>
+<key>PayloadType</key>
+<string>Configuration</string>
+<key>PayloadOrganization</key>
+<string>ESET</string>
+<key>PayloadIdentifier</key>
+<string>292E66E6-E04D-4810-9695-78086CAB61D3</string>
+<key>PayloadDisplayName</key>
+<string>ESET Network Protection</string>
+<key>PayloadDescription</key>
+<string/>
+<key>PayloadVersion</key>
+<integer>1</integer>
+<key>PayloadEnabled</key>
+<true/>
+<key>PayloadRemovalDisallowed</key>
+<true/>
+<key>PayloadScope</key>
+<string>System</string>
+<key>PayloadContent</key><array><dict><key>PayloadUUID</key><string>5180310A-B6CB-401A-8CF4-12FF6F4AFB89</string><key>PayloadType</key><string>com.apple.vpn.managed</string><key>PayloadOrganization</key><string>ESET</string><key>PayloadIdentifier</key><string>5180310A-B6CB-401A-8CF4-12FF6F4AFB89</string><key>PayloadDisplayName</key><string>VPN</string><key>PayloadDescription</key><string/><key>PayloadVersion</key><integer>1</integer><key>PayloadEnabled</key><true/><key>IPSec</key><dict><key>RemoteAddress</key><string>localhost</string><key>OnDemandUserOverrideDisabled</key><integer>0</integer><key>DisconnectOnIdle</key><integer>0</integer><key>XAuthName</key><string/><key>OnDemandEnabled</key><integer>1</integer><key>XAuthPassword</key><string/><key>AuthenticationMethod</key><string>None</string><key>PayloadCertificateUUID</key><string/><key>PromptForVPNPIN</key><false/></dict><key>IPv4</key><dict><key>OverridePrimary</key><integer>1</integer></dict><key>Proxies</key><dict><key>HTTPEnable</key><integer>1</integer><key>HTTPSEnable</key><integer>1</integer><key>HTTPSProxy</key><string>localhost</string><key>HTTPSPort</key><integer>57856</integer><key>HTTPProxy</key><string>localhost</string><key>HTTPPort</key><integer>57856</integer></dict><key>UserDefinedName</key><string>ESET Network Protection</string><key>VPN</key><dict><key>RemoteAddress</key><string>localhost</string><key>OnDemandUserOverrideDisabled</key><integer>0</integer><key>ExcludeLocalNetworks</key><integer>0</integer><key>OnDemandRules</key><array><dict><key>Action</key><string>Connect</string></dict></array><key>AuthName</key><string/><key>ProviderDesignatedRequirement</key><string>identifier "com.eset.network" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = P8DQRXPVLP</string><key>OnDemandEnabled</key><integer>1</integer><key>ProviderBundleIdentifier</key><string>com.eset.network</string><key>AuthenticationMethod</key><string>Certificate</string><key>ProviderType</key><string>app-proxy</string><key>IncludeAllNetworks</key><integer>0</integer></dict><key>VPNType</key><string>VPN</string><key>VPNSubType</key><string>com.eset.sysext.manager</string><key>VendorConfig</key><dict/><key>OnDemandUserOverrideDisabled</key><integer>0</integer></dict></array>
+</dict>
+</plist>

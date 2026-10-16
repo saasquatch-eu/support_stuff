@@ -1,0 +1,10 @@
+Groups
+
+  Group Creation
+
+    gam create group >>>group email address<<< name ">>>Group's full name<<<" allow_external_members true who_can_invite all_managers_can_invite who_can_view_group all_members_can_view who_can_view_membership all_in_domain_can_view who_can_post_message anyone_can_post
+
+  Managing members
+    gam update group >>>group email<<< add/remove owner/manager/member >>>username<<<
+    
+  

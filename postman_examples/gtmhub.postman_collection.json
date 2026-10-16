@@ -1,0 +1,20 @@
+{
+	"info": {
+		"_postman_id": "b0bf7423-e793-4bcb-8056-c4e4dab21a82",
+		"name": "gtmhub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gtmhub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

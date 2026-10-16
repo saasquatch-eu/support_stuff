@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "cd18438c-138d-43f0-b676-95f7e51cc58e",
+		"name": "Fresh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get ticket details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get service Item",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{FRESH_USERNAME}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "X",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://netguru.freshservice.com//api/v2/service_catalog/items/63",
+					"protocol": "https",
+					"host": [
+						"netguru",
+						"freshservice",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v2",
+						"service_catalog",
+						"items",
+						"63"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an asset",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{FRESH_USERNAME}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "X",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://netguru.freshservice.com/api/v2/assets/7604?include=type_fields",
+					"protocol": "https",
+					"host": [
+						"netguru",
+						"freshservice",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"assets",
+						"7604"
+					],
+					"query": [
+						{
+							"key": "include",
+							"value": "type_fields"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

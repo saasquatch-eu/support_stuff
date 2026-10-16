@@ -1,0 +1,37 @@
+Copy files
+
+  gam user copy drivefile >>>folder/file ID<<< recursive depth N parentid >>>Folder/drive ID<<<
+  
+    N - liczba określająca jak głęboko ma szukać plików
+
+
+File Info
+   gam user >>username<< show filelist query 'title="filename/foldername"' id
+   
+   output:
+    Owner,id
+    username,file_id
+
+Ownership Claim
+
+ownership claim
+gam <UserTypeEntity> claim ownership <DriveFileEntity> [skipids <DriveFileEntity>] [skipusers <UserTypeEntity>] [subdomains <DomainNameEntity>] [includetrashed] [writerscantshare] [preview] [filepath] [todrive [<ToDriveAttributes>]]
+
+plik u patryka
+
+jerry-mbp:bin jerry$ gam user jerry claim ownership 19d_-c7x7wEpHdSIaRv8U7qAgDgISVt3lzUmfIDbx9R0
+User: jerry@netguru.com, Claim Ownership 1 Drive File/Folder
+  User: jerry@netguru.com, Claim Ownership Drive File: jebudup (19d_-c7x7wEpHdSIaRv8U7qAgDgISVt3lzUmfIDbx9R0)
+    User: jerry@netguru.com, Claim Ownership 1 User
+      User: jerry@netguru.com, Claim Ownership 1 Drive File/Folder from User: patryk.gryka@netguru.com
+        User: jerry@netguru.com, Drive File: jebudup (19d_-c7x7wEpHdSIaRv8U7qAgDgISVt3lzUmfIDbx9R0), Ownership Claimed from User: patryk.gryka@netguru.com
+        User: patryk.gryka@netguru.com, Drive File: jebudup (19d_-c7x7wEpHdSIaRv8U7qAgDgISVt3lzUmfIDbx9R0), Role: writer, Retained
+
+not netguru owner
+
+jerry-mbp:bin jerry$ gam user jerry claim ownership 0B1LVSYB2hv9kTXlpNWhDX0k3c28
+User: jerry@netguru.com, Claim Ownership 1 Drive File/Folder
+  User: jerry@netguru.com, Claim Ownership Drive File: Partyka Małgorzata 1.jpg (0B1LVSYB2hv9kTXlpNWhDX0k3c28)
+    User: jerry@netguru.com, Claim Ownership 1 User
+      User: jerry@netguru.com, Claim Ownership Not Performed 1 Drive File/Folder from User: mkowalczuk.kursfoto@gmail.com
+        User: jerry@netguru.com, Drive File: Partyka Małgorzata 1.jpg (0B1LVSYB2hv9kTXlpNWhDX0k3c28), Ownership Not Claimed: User: mkowalczuk.kursfoto@gmail.com in other domain.

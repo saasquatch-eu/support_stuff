@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "204c5f6e-97d1-4eb1-b7e8-232e36030b37",
+		"name": "rollbar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rollbar all teams",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.rollbar.com/api/1/teams",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"api",
+						"1",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users SCIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ROLLBAR_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{ROLLBAR_PASSWORD}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://scim.rollbar.com/scim/Users",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"scim",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.rollbar.com/api/1/users",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"api",
+						"1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deactivate user SCIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ROLLBAR_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{ROLLBAR_PASSWORD}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"path\": \"active\",\n      \"value\": false\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://scim.rollbar.com/scim/Users/5142",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"scim",
+						"Users",
+						"5142"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user SCIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ROLLBAR_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{ROLLBAR_PASSWORD}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"path\": \"active\",\n      \"value\": false\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://scim.rollbar.com/scim/Users/<id>",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"scim",
+						"Users",
+						"<id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change primary email SCIM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ROLLBAR_TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{ROLLBAR_PASSWORD}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-Rollbar-Access-Token",
+						"value": "{{ROLLBAR_X_ROLLBAR_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"Operations\": [\n        {\n            \"op\": \"remove\",\n            \"path\": \"emails\",\n            \"value\": [\n                {\n                    \"value\": \"maciej.wicher@netguru.pl\",\n                    \"primary\": false\n                }\n            ]\n        }\n    ],\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ]\n}\n"
+				},
+				"url": {
+					"raw": "https://scim.rollbar.com/scim/Users/170476",
+					"protocol": "https",
+					"host": [
+						"scim",
+						"rollbar",
+						"com"
+					],
+					"path": [
+						"scim",
+						"Users",
+						"170476"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

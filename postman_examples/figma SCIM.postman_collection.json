@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "4026858b-05c4-4bd8-90b7-c72b765538f2",
+		"name": "figma SCIM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{FIGMA_SCIM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/scim+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://www.figma.com/scim/v2/848294576064404813/Users",
+					"protocol": "https",
+					"host": [
+						"www",
+						"figma",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"848294576064404813",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{FIGMA_SCIM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/scim+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"path\": \"active\",\n      \"value\": false\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://www.figma.com/scim/v2/848294576064404813/Users/952192760469672669",
+					"protocol": "https",
+					"host": [
+						"www",
+						"figma",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"848294576064404813",
+						"Users",
+						"952192760469672669"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add parameters",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{FIGMA_SCIM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/scim+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schemas\":\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\",\n  \"Operations\": [\n    {\n      \"op\": \"add\",\n      \"path\":\"dep\",\n      \"value\":\"test\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://www.figma.com/scim/v2/848294576064404813/Users/952467556352217539",
+					"protocol": "https",
+					"host": [
+						"www",
+						"figma",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"848294576064404813",
+						"Users",
+						"952467556352217539"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create scim user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{FIGMA_SCIM_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/scim+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\", \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\"],\n    \"userName\": \"testowy.test.figma2@netguru.com\",\n    \"name\": {\n        \"givenName\": \"testowy\",\n        \"familyName\": \"test2\"\n    },\n    \"emails\": [{\n        \"primary\": true,\n        \"value\": \"testowy.test.figma2@netguru.com\",\n        \"type\": \"work\"\n    }],\n    \"displayName\": \"testowy test2\",\n    \"groups\": [],\n    \"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\" : \n   {\n      \"department\":  \"test\"\n   },\n    \"active\": true\n}"
+				},
+				"url": {
+					"raw": "https://www.figma.com/scim/v2/848294576064404813/Users/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"figma",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"848294576064404813",
+						"Users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
